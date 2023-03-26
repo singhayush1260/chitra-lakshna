@@ -1,0 +1,81 @@
+$heading1: "Playfair Display", serif;
+.welcome_message {
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+  font-size: 24px;
+  padding: 2em 0;
+  h1 {
+    font-size: 1.4em;
+    padding-top: 1.5em;
+    font-family: $heading1;
+    color: rgba($color: #000000, $alpha: 0.8);
+  }
+  p {
+    width: 75%;
+    margin-left: 12%;
+    font-size: 1.1rem;
+    padding: 1em 1.8em;
+    line-height: 2rem;
+    font-family: "Montserrat", sans-serif;
+    color: rgba($color: #000000, $alpha: 0.7);
+  }
+}
+
+@media (max-width: 520px) {
+  .welcome_message {
+    height: 30vh;
+    max-height: 40vh;
+    font-size: 10px;
+    h1 {
+      font-size: 1.4em;
+    }
+    p {
+      font-size: 0.7rem;
+      line-height: 1.2rem;
+    }
+  }
+}
+@media (max-width: 620px) {
+  .welcome_message {
+    height: 30vh;
+    max-height: 40vh;
+    font-size: 22px;
+    h1 {
+      font-size: 1.4em;
+    }
+    p {
+      font-size: 0.7rem;
+      line-height: 1.2rem;
+    }
+  }
+}
+@media (max-width: 1440px) {
+  .welcome_message {
+    height: 40vh;
+  }
+}
+@media (max-width: 768px) {
+  .welcome_message {
+    height: 50vh;
+    font-size: 12px;
+  }
+}
+@media (max-width: 1024px) {
+  .welcome_message {
+    height: 45vh;
+  }
+}
+@media (min-width: 2560px) {
+  .welcome_message {
+    height: 60vh;
+    font-size: 25px;
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 2rem;
+      line-height: 4rem;
+    }
+  }
+}

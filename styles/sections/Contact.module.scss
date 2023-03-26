@@ -1,0 +1,21 @@
+$heading1: "Playfair Display", serif;
+.contact{
+    width: 100%;
+    height: 30vh;
+    text-align: center;
+    font-size: 24px;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+    font-family: $heading1;
+    padding-top: 1em;
+    h1{
+        font-size: 2em;
+    }
+    svg{
+        font-size: 2rem;
+        margin: 2rem 0.8rem 2rem 0.8rem;
+        transition: all 0.5s ease;
+    }
+    svg:hover{
+        transform: scale(0.98);
+    }
+}
