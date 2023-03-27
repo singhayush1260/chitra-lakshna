@@ -9,6 +9,7 @@ $color-primary: #ea5455;
     gap:4%;
     border-radius: 5px;
     font-size: 24px;
+    text-transform: capitalize;
     border: 2px solid $color-primary;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: all 0.3s ease-in;

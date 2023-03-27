@@ -2,11 +2,10 @@
 import classes from '../../styles/pages/BlogPost.module.scss';
 import { FacebookShareButton, TwitterShareButton } from 'react-share';
 import {CiFacebook, CiTwitter} from 'react-icons/ci';
-import { useRouter } from 'next/router';
 const BlogPost=()=>{
 
-const router=useRouter();
-console.log(router);
+//const currentURL=window.location.href;
+
     return(
         <div className={classes.page_wrapper}>
             <div className={classes.container}>
@@ -15,8 +14,8 @@ console.log(router);
                <p>Ayush Singh</p>
                <p>12th March, 2023</p>
                <p className={classes.social_share}> 
-               <FacebookShareButton url={router.asPath}><CiFacebook/></FacebookShareButton>   
-               <TwitterShareButton  url={'https://www.example.com'}><CiTwitter/></TwitterShareButton>
+               <FacebookShareButton url={""}><CiFacebook/></FacebookShareButton>   
+               <TwitterShareButton  url={""}><CiTwitter/></TwitterShareButton>
                </p>
                </div>
                 <div className={classes.post_body}>

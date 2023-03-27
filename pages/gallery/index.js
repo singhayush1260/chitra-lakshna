@@ -3,9 +3,10 @@ import { GrGallery } from "react-icons/gr";
 import { RxCross1 } from "react-icons/rx";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-const Gallery = () => {
-  const [images, setImages] = useState([]);
-  const [filtered, setFiltered] = useState([]);
+import sanityClient from '../../sanity/sanity';
+const Gallery = ({data}) => {
+  const [images, setImages] = useState(data);
+  const [filtered, setFiltered] = useState(data);
   const [activeCategory, setActiveCategory] = useState("all");
   const [modal, setModal] = useState(false);
   const [imgSrc, setImageSrc] = useState("");
@@ -18,42 +19,16 @@ const Gallery = () => {
   };
 
   useEffect(() => {
-    setImages(
-      new Array(
-        { id: 1, src: "/images/explore_painting/p1.png", type: "abstract" },
-        { id: 2, src: "/images/explore_painting/p2.png", type: "caricature" },
-        { id: 3, src: "/images/explore_painting/p3.png", type: "portraits" },
-        { id: 4, src: "/images/explore_painting/p1.png", type: "abstract" },
-        { id: 5, src: "/images/explore_painting/p1.png", type: "portraits" },
-        { id: 6, src: "/images/explore_painting/p1.png", type: "abstract" },
-        { id: 7, src: "/images/explore_painting/p1.png", type: "caricature" },
-        { id: 8, src: "/images/explore_painting/p1.png", type: "portraits" }
-      )
-    );
-    setFiltered(
-      new Array(
-        { id: 1, src: "/images/explore_painting/p1.png", type: "abstract" },
-        { id: 2, src: "/images/explore_painting/p2.png", type: "caricature" },
-        { id: 3, src: "/images/explore_painting/p3.png", type: "portraits" },
-        { id: 4, src: "/images/explore_painting/p1.png", type: "abstract" },
-        { id: 5, src: "/images/explore_painting/p1.png", type: "portraits" },
-        { id: 6, src: "/images/explore_painting/p1.png", type: "abstract" },
-        { id: 7, src: "/images/explore_painting/p1.png", type: "caricature" },
-        { id: 8, src: "/images/explore_painting/p1.png", type: "portraits" }
-      )
-    );
-    console.log(images);
-    console.log(filtered);
+   setImages(data);
+   setFiltered(data);
   }, []);
 
   useEffect(() => {
-    if (activeCategory === "all") {
+    if (activeCategory === "all"){
       setFiltered(images);
       return;
     }
-    const filteredData = images.filter((image) => {
-      return image.type === activeCategory;
-    });
+    const filteredData = images.filter((image) => {return image.type === activeCategory;});
     setFiltered(filteredData);
   }, [activeCategory]);
 
@@ -86,17 +61,16 @@ const Gallery = () => {
         <motion.div layout className={classes.image_grid}>
           <AnimatePresence>
             {filtered.map((image) => {
+              {console.log('inside filter',image.image.asset.url)}
               return (
                 <motion.img
                   layout
                   animate={{ opacity: 1 }}
                   initial={{ opacity: 0 }}
                   exit={{ opacity: 0 }}
-                  src={image.src}
+                  src={image.image.asset.url}
                   key={image.id}
-                  onClick={() => {
-                    openImage(image.src);
-                  }}
+                  onClick={() => {openImage(image.image.asset.url)}}
                 />
               );
             })}
@@ -106,6 +80,19 @@ const Gallery = () => {
     </>
   );
 };
+
+
+export async function getStaticProps() {
+  const images = await sanityClient.fetch(`*[_type=='gallery']{title,type, image{asset->{_id,url}}}`);
+  console.log(images[0]);
+  return {
+    props: {
+      data: images,
+    },
+    revalidate:3600
+  };
+}
+
 export default Gallery;
 
 /*
@@ -130,5 +117,34 @@ export default Gallery;
           <button onClick={()=>{setActiveCategory('abstract')}}>Abstract</button>
           <button onClick={()=>{setActiveCategory('caricature')}}>Caricature</button>
           <button onClick={()=>{setActiveCategory('portraits')}}>Portraits</button>
+
+*/
+/*
+
+ setImages(
+      new Array(
+        { id: 1, src: "/images/explore_painting/p1.png", type: "abstract" },
+        { id: 2, src: "/images/explore_painting/p2.png", type: "caricature" },
+        { id: 3, src: "/images/explore_painting/p3.png", type: "portraits" },
+        { id: 4, src: "/images/explore_painting/p1.png", type: "abstract" },
+        { id: 5, src: "/images/explore_painting/p1.png", type: "portraits" },
+        { id: 6, src: "/images/explore_painting/p1.png", type: "abstract" },
+        { id: 7, src: "/images/explore_painting/p1.png", type: "caricature" },
+        { id: 8, src: "/images/explore_painting/p1.png", type: "portraits" }
+      )
+    );
+    setFiltered(
+      new Array(
+        { id: 1, src: "/images/explore_painting/p1.png", type: "abstract" },
+        { id: 2, src: "/images/explore_painting/p2.png", type: "caricature" },
+        { id: 3, src: "/images/explore_painting/p3.png", type: "portraits" },
+        { id: 4, src: "/images/explore_painting/p1.png", type: "abstract" },
+        { id: 5, src: "/images/explore_painting/p1.png", type: "portraits" },
+        { id: 6, src: "/images/explore_painting/p1.png", type: "abstract" },
+        { id: 7, src: "/images/explore_painting/p1.png", type: "caricature" },
+        { id: 8, src: "/images/explore_painting/p1.png", type: "portraits" }
+      )
+    );
+
 
 */
