@@ -60,7 +60,7 @@ const Gallery = ({data}) => {
         </div>
         <motion.div layout className={classes.image_grid}>
           <AnimatePresence>
-            {filtered.map((image) => {
+            {filtered.length===0? <p>No images found.</p>  :filtered.map((image) => {
               {console.log('inside filter',image.image.asset.url)}
               return (
                 <motion.img

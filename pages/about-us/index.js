@@ -6,7 +6,7 @@ const AboutUs=()=>{
         <div className={classes.page_wrapper}>
         <div className={classes.container}>
         <div className={classes.headings}>
-        <h1>About<span>Us</span> </h1>
+        <h1>About<span>Us</span></h1>
         </div>    
             <div className={classes.image}>
                 <img src='/images/home/banner_image1.jpg'/>

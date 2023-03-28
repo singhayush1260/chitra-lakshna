@@ -4,11 +4,8 @@ const WelcomeMessage=()=>{
         <section className={classes.welcome_message}>
          <h1>Welcome To Our  <span>Website</span></h1>
          <p>
-         Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin
-         molestie malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-         Donec sollicitudin molestie malesuada. Cras ultricies ligula sed magna dictum porta
-         Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue 
-         leo eget malesuada. Cras ultricies ligula sed magna dictum porta. 
+         Hi, we're Swati Kumar and Neha Singh, we live in different parts of the world (Saudi Arabia and India) but collaborate daily to create work that reflects the diversities of cultures and originality of the most kindest, welcoming nations Saudi and India. 
+         We work in a variety of mediums from Illustration, Abstract, Folk Art through to Portraiture and Design. 
          </p>
         </section>
     )
