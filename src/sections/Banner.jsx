@@ -1,6 +1,5 @@
 import classes from "../../styles/sections/Banner.module.scss";
 import { motion } from "framer-motion";
-import {AiOutlineShopping} from 'react-icons/ai'
 const Banner = () => {
   return (
     <section className={classes.banner}>
@@ -19,12 +18,3 @@ const Banner = () => {
   );
 };
 export default Banner;
-
-/*
-
-initial={{x:'-100vw'}}
-    animate={{x:0}}
-    transition={{type:'spring',duration:1,bounce:0.2}}
-
-
-    */

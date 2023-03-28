@@ -39,20 +39,3 @@ const Blog = () => {
   );
 };
 export default Blog;
-
-
-/*
-
- useEffect(() => {
-    setIsLoading(true);
-    const fetchPosts = async () => {
-    const data = await fetch("https://dummyjson.com/products");
-    const posts = await data.json();
-    setPosts(posts.products);
-    setIsLoading(false);
-    };
-    fetchPosts();
-  }, []);
-
-
-*/
