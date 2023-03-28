@@ -37,7 +37,6 @@ $color-primary: #ea5455;
     font-size: 20px;
     min-height: 110vh;
     height: auto;
-    margin-top: 20px;
     padding-bottom: 4vh;
     h1{
       font-size: 1.1em;
@@ -80,7 +79,6 @@ $color-primary: #ea5455;
 @media (min-width: 1201px) {
   .explore_painting {
     height: auto;
-    margin-top: 130px;
     .image_container {
       grid-template-columns: 1fr 1fr 1fr;
     }

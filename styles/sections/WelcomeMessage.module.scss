@@ -1,10 +1,11 @@
 $heading1: "Playfair Display", serif;
 .welcome_message {
   width: 100%;
-  height: 60vh;
+  height: 40vh;
   text-align: center;
   font-size: 24px;
   padding: 2em 0;
+  margin-bottom: 90px;
   h1 {
     font-size: 1.5em;
     padding-top: 1.5em;
@@ -22,65 +23,44 @@ $heading1: "Playfair Display", serif;
 
 @media (min-width:320px) and (max-width:486px){
   .welcome_message{
-    background-color: purple;
-    font-size: 50px;
+    font-size: 20px;
+    padding: 1em 0;
+    height: auto;
+    margin-bottom: 10px;
+    h1{
+      font-size: 1.3em;
+    }
+    p{
+      margin-left: 10%;
+      font-size: 1em;
+    }
+    
   }
 }
 
-@media (max-width: 520px) {
-  .welcome_message {
-    height: 30vh;
-    max-height: 40vh;
-    font-size: 10px;
-    h1 {
-      font-size: 1.4em;
-    }
-    p {
-      font-size: 0.7rem;
-      line-height: 1.2rem;
-    }
-  }
-}
-@media (max-width: 620px) {
-  .welcome_message {
-    height: 30vh;
-    max-height: 40vh;
-    font-size: 22px;
-    h1 {
-      font-size: 1.4em;
-    }
-    p {
-      font-size: 0.7rem;
-      line-height: 1.2rem;
-    }
-  }
-}
-@media (max-width: 1440px) {
-  .welcome_message {
-    height: 40vh;
-  }
-}
-@media (max-width: 768px) {
-  .welcome_message {
-    height: 50vh;
-    font-size: 12px;
-  }
-}
-@media (max-width: 1024px) {
-  .welcome_message {
+@media (min-width: 487px) and (max-width: 786px) {
+  .welcome_message{
     height: 45vh;
-  }
-}
-@media (min-width: 2560px) {
-  .welcome_message {
-    height: 60vh;
-    font-size: 25px;
-    h1 {
-      font-size: 2em;
+    margin-bottom: 20px;
+    h1{
+      padding: 0;
     }
-    p {
-      font-size: 2rem;
-      line-height: 4rem;
-    }
-  }
+   }
 }
+@media (min-width: 787px) and (max-width: 1024px) {
+ .welcome_message{
+  height: 45vh;
+  margin-bottom: 10px;
+ }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+.welcome_message{
+  height: 35vh;
+  margin-bottom: 10px;
+  padding: 0;
+}
+}
+
+
+
+
