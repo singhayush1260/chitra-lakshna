@@ -20,3 +20,4 @@ const router=useRouter();
     )
 }
 export default BlogCard;
+
