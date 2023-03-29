@@ -31,7 +31,7 @@ const Blog = () => {
                 desc={post.description}
                 author={post.author?post.author:"Anonymous"}
                 publishedAt={post.publishedAt?post.publishedAt:new Date().getDate()} 
-                slug={post.slug.current}/>);
+                slug={post.slug?post.slug.current:"artice-not-found"}/>)
           })}
         </div>
       )}
