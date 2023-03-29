@@ -21,7 +21,7 @@ const BlogPost=({post})=>{
                 <div className={classes.post_body}>
                 <img src={post.mainImage?post.mainImage.asset.url:'/images/utils/image_placeholder.jpg'} alt="thumbnail" />
                 <p>
-                {post.body[0].children[0].text}
+                {post.body?post.body[0].children[0].text:""}
                 </p>
                 </div>               
             </div>
@@ -35,7 +35,7 @@ export async function getStaticPaths() {
     const paths = slugs.map((slug) => {
       return {
         params: {
-          postSlug: `${slug.slug?slug.slug.current:""}`,
+          postSlug: `${slug.slug.current}`,
         },
       };
     });
@@ -50,8 +50,6 @@ export async function getStaticPaths() {
     let post = await sanityClient.fetch(`*[slug.current=="${slug}"]{title,_id,slug,
     mainImage{asset->{ _id, url}},body,"author":author->name,categories,publishedAt }`);
     const notFound = post[0] ? false : true;
-    
-  
    return { props: { post: post[0] },notFound};
   }
 
