@@ -29,6 +29,99 @@ $color-primary: #ea5455;
         width: calc(100% - 30vw);
         min-height: 90vh;
         height: auto;
+        gap:10px;
+        text-align: center;
+            font-family: 'Samarkan';
+        .members{
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:20px;
+            .image{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                img{
+                    max-height: 100%;
+                    max-width: 100%;
+                    width: 70%;
+                    height: 100%;
+                }
+            }
+            .even{
+                justify-content: start;
+            }
+        }
+
+    }
+}
+
+@media (min-width: 320px) and (max-width: 486px) {
+    .page_wrapper{
+        font-size: 20px;
+         .our_story{
+            width: calc(100% - 15vw);
+            margin-bottom: 20px;
+            p{
+                text-align: start;
+                padding: 0;
+                width: 100%;
+            }
+         }
+        .our_team{
+            .members{
+                grid-template-columns: none;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                .image{
+                    justify-content: center;
+                    img{
+                        width:100%;
+                    }
+                }
+                .even{
+                    justify-content: center;
+                }
+            }
+            
+        }
+    }
+     }
+     
+
+
+      /*
+$color-primary: #ea5455;
+.page_wrapper{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 40px;
+    .our_story{
+        width: calc(100% - 40vw);
+        min-height: 30vh;
+        height: auto;
+        text-align: center;
+        h1{
+            font-size: 1.8em;
+            padding-top: 1em;
+        }
+        p{
+            padding: 1em;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            line-height: 1.5em;
+        }
+    }
+    .our_team{
+        width: calc(100% - 30vw);
+        min-height: 90vh;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -149,3 +242,6 @@ $color-primary: #ea5455;
             }
           }
       }
+
+
+      */

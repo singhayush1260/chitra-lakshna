@@ -9,15 +9,15 @@ const Categories = () => {
       <div className={classes.container}>
         <div>
           <img src="/images/categories/c1.png" alt="" />
-          <p>Abstract</p>
+          <p>Design</p>
         </div>
         <div>
           <img src="/images/categories/c2.png" alt="" />
-          <p>Abstract</p>
+          <p>Mithila Folk Art</p>
         </div>
         <div>
           <img src="/images/categories/c3.png" alt="" />
-          <p>Abstract</p>
+          <p>Painting</p>
         </div>
       </div>
     </section>

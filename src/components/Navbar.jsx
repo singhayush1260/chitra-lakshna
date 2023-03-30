@@ -29,7 +29,7 @@ function NavBar() {
             <li className={classes.nav_item}>
               <Link
                 exact
-                href="/gallery"
+                href="https://www.behance.net/9a436856"
                 activeClassName="active"
                 className={classes.nav_links}
                 onClick={handleClick}
