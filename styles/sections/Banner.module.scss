@@ -1,4 +1,4 @@
-$color-primary:   #EA5455;
+$color-primary:   #e9c6b8;
 $background-color:#EFF5F5;
 .banner{
     width: 100%;
@@ -46,7 +46,7 @@ $background-color:#EFF5F5;
             border-radius: 4px;
             border: none;
             cursor: pointer;
-            background-color: #EA5455;
+            background-color: $color-primary;
             color: white;
             transition: all 0.4s ease;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

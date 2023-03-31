@@ -8,11 +8,11 @@ const Categories = () => {
       </h1>
       <div className={classes.container}>
         <div>
-          <img src="/images/categories/c1.png" alt="" />
+          <img src="/images/categories/design.jpg" alt="" />
           <p>Design</p>
         </div>
         <div>
-          <img src="/images/categories/c2.png" alt="" />
+          <img src="/images/categories/mithila.jpg" alt="" />
           <p>Mithila Folk Art</p>
         </div>
         <div>
