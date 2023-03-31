@@ -10,7 +10,7 @@ $color-primary: #ea5455;
   position: sticky;
   top: 0;
   z-index: 20;
-  font-family: 'Samarkan';
+ 
 }
 
 .nav_container {
@@ -30,6 +30,7 @@ $color-primary: #ea5455;
   text-decoration: none;
   font-size: 2rem;
   flex-grow: 1;
+  font-family: 'Samarkan';
 }
 
 .nav_menu {

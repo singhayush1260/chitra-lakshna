@@ -18,7 +18,7 @@ const Contact = () => {
    <>
    <ToastContainer position="top-right" autoClose={3000}  hideProgressBar={true} newestOnTop={false}closeOnClick rtl={false} theme="light"/>
     <div className={classes.contact_page}>
-        <h1>Contact<span>Us</span> </h1>
+        <h1>Contact<span> Us</span> </h1>
       <div className={classes.formbold_main_wrapper}>
         <div className={classes.formbold_form_wrapper}>
           <form onSubmit={handleSubmit} enctype="text/plain" id="form">
