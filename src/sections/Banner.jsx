@@ -11,7 +11,8 @@ const Banner = () => {
         transition={{ duration: 0.8 }}
       >
         <h1>Chitra Lakshana</h1>
-        <p>Illustration And Designs</p>
+        {/* <p>Illustration And Designs</p> */}
+        <p>Art And History</p>
         <button>Visit Store</button>
       </motion.div>
     </section>

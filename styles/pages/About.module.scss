@@ -1,4 +1,4 @@
-$color-primary: #ffa45b;
+$color-primary:#c8733a;
 .page_wrapper{
     width: 100%;
     min-height: 100vh;
@@ -23,6 +23,9 @@ $color-primary: #ffa45b;
             font-size: 0.8em;
             letter-spacing: 1px;
             line-height: 1.5em;
+            span{
+                font-weight: bold;
+            }
         }
     }
     .our_team{

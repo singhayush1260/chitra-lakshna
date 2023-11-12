@@ -1,5 +1,6 @@
 $heading1: "Playfair Display", serif;
-$color-primary: #ffa45b;
+//$color-primary: #ffa45b;
+$color-primary:#c8733a;
 .navbar {
   background-color: $color-primary;
   height: 80px;
@@ -10,6 +11,7 @@ $color-primary: #ffa45b;
   position: sticky;
   top: 0;
   z-index: 20;
+  
  
 }
 
@@ -30,6 +32,7 @@ $color-primary: #ffa45b;
   text-decoration: none;
   font-size: 2rem;
   flex-grow: 1;
+  //font-family: 'Kdam Thmor Pro', sans-serif;
   font-family: 'Samarkan';
 }
 

@@ -1,43 +1,40 @@
 
 import classes from '../../styles/pages/About.module.scss';
-const AboutUs=()=>{
-    return(
+const AboutUs = () => {
+    return (
         <div className={classes.page_wrapper}>
-         <div className={classes.our_story}>
-           <h1>Our <span>Story</span></h1>
-           <p>
-           Swati and Neha have been connected circa 2018, while Swati was on the way to being a mom 
-           and Neha, soon to graduate from Patna Arts &Crafts college. The bond between them grew
-            stronger when 'Rudra' who was still a "bun in the oven" was subconsciously bringing them 
-            together as a team. They divide their time between their lifestyles
-             around their IST locations to create a diverse range of Art, Blog and discuss their dreams. 
-             Discussions on the different art forms, exploring with a world of
-              experiences is an everyday thing for these charming dreamers. This team aspires to receive
-               and share memories and art forms as deep as the legacy of both the historical nations.
-               However, the two ladies share one thing in common, their deep rooted societal and cultural heritage. Their homeland, Bihar, nestled in the north of India's tradition and history, has a very ancient historical depth that converges with many civilizations. 
-Bihar is known around the world for its origin of two religions, namely Buddhism and Jainism. From Bihar it spread to the entire world. 
-We celebrate the fact that world's first university, Nalanda in Takshila was built in 700B.C. 
-With such a rich cultural heritage, one cannot stay away from the land which brings together talented local artists that are sure to inspire &educate visitors
-           </p>
-         </div>
-            <div className={classes.our_team}>
-            <h2> Meet <span>Our</span> Team </h2>
-            <div className={classes.members}>
-                   <div className={classes.image}>
-                    <img src="/images/team/neha.jpg"/> 
-                   </div>
-                   <div className={`${classes.image} ${classes.even}`}>
-                    <img src="/images/team/swati.jpg"/> 
+            <div className={classes.our_story}> 
+                <h1>Our <span>Story</span></h1>
+                <p>
+                As a multifaceted artist and art historian, I seamlessly blend creative
+                expression with scholarly exploration. My palette extends beyond the canvas,
+                intertwining the strokes of my artistic endeavors with a profound understanding 
+                of the historical and cultural contexts that shape the world of art. With a keen
+                 eye for aesthetics, I navigate the realms of creation and interpretation, seamlessly 
+                 weaving narratives that bridge the past and the present. In addition to my artistic 
+                 pursuits, I offer a range of services that reflect my dedication to the arts.
+                  These include <span>custom commissions</span> , <span>art consultancy</span> , and insightful art history blogs,
+                   all clearly outlined on my website.
+                </p>
+            </div>
+            {/* <div className={classes.our_team}>
+                <h2> Meet <span>Our</span> Team </h2>
+                <div className={classes.members}>
+                    <div className={classes.image}>
+                        <img src="/images/team/neha.jpg" />
+                    </div>
+                    <div className={`${classes.image} ${classes.even}`}>
+                        <img src="/images/team/swati.jpg" />
                     </div>
                     <div className={classes.image}>
-                    <img src="/images/team/km.jpg"/> 
+                        <img src="/images/team/km.jpg" />
                     </div>
-                   <div className={`${classes.image} ${classes.even}`}>
-                    <img src="/images/team/priya.jpg"/> 
-                   </div>
+                    <div className={`${classes.image} ${classes.even}`}>
+                        <img src="/images/team/priya.jpg" />
+                    </div>
                 </div>
-           </div>
-           </div>
+            </div> */}
+        </div>
 
     )
 }
@@ -128,4 +125,4 @@ export default AboutUs;
 */
 
 
- 
+

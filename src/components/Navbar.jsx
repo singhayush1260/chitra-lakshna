@@ -34,7 +34,7 @@ function NavBar() {
                 className={classes.nav_links}
                 onClick={handleClick}
               >
-                Gallery
+                Behance
               </Link>
             </li>
             <li className={classes.nav_item}>
